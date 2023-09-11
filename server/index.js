@@ -3,15 +3,14 @@ import  express  from "express";
 import {dirname,join} from 'path'
 import { fileURLToPath } from "url";
 import cors from 'cors'
-const port = process.env.PORT || 3000;
-const APIKEY = '193c816b89d94d88a5632925232008';
-
+import {port} from "./config.js";
+import { APIKEY } from "./config.js";
 const app = express()
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const corsOptions = {
-    origin: `http://localhost:${port}`,
+    origin: '*'
 };
 
 app.use(cors(corsOptions));
