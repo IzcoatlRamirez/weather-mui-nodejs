@@ -32,7 +32,7 @@ function App() {
     try {
       e.preventDefault();
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/weather", {
+      const response = await axios.post("https://weather-mui-nodejs-121731bb6629.herokuapp.com/weather", {
         data: location,
       });
       const data=response.data;
